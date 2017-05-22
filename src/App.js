@@ -34,7 +34,7 @@ class MyForm extends Component{
     {
         return (
             <form>
-                魔灵星级：<input id="star" type="text" name="star"/>
+                魔灵星级：<input id="star" type="text" name="star" />
                 当前等级：<input id="curLevel" type="text" name="curLevel"/>
                 当前经验：<input id="curExp" type="text" name="curExp"/>
                 战斗经验：<input id="fightExp" type="text" name="fightExp"/><br/>
@@ -44,31 +44,27 @@ class MyForm extends Component{
     }
     handleClick()
     {
-        let star=$('#star').val();
-        let curLevel=$('#curLevel').val();
-        let curExp=$('#curExp').val();
-        let fightExp=$('#fightExp').val();
-
-        let settings = {
-            type: "GET",
-            url: "45.62.117.196:18888/fighttime",
-            async: true,
-            data: {
-                star: star,
-                curLevel: curLevel,
-                curExp: curExp,
-                fightExp: fightExp,
-            },
-            success: function (data) {
-                alert(data);
-            },
-            error: function()
-            {
-              alert('跪了');
-            },
+        let postData = {
+            star: $('#star').val(),
+            curLevel: $('#curLevel').val(),
+            curExp: $('#curExp').val(),
+            fightExp: $('#fightExp').val(),
         };
-        $.get(settings);
-
+        fetch('http://45.62.117.196:18888/fighttime', {
+            method: 'POST',
+            mode: 'cors',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(postData)
+        }).then(function(response) {
+            return response.json();
+        }).then(function (data) {
+            alert(data);
+        }).catch(function (err) {
+            alert('跪了');
+        });
     }
 }
 
