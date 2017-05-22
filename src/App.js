@@ -50,7 +50,7 @@ class MyForm extends Component{
             curExp: $('#curExp').val(),
             fightExp: $('#fightExp').val(),
         };
-        fetch('http://45.62.117.196:18888/fighttime', {
+        fetch('http://localhost:18888/fighttime', {
             method: 'POST',
             mode: 'cors',
             credentials: 'include',
