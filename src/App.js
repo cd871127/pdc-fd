@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import $ from 'jquery';
+import MyC from './login/login'
+// import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 // class App extends Component {
 //   render() {
@@ -22,11 +24,16 @@ import $ from 'jquery';
 // }
 
 class App extends Component {
-  render() {
-    return (
-        <MyForm />
-    );
-  }
+  // render() {
+  //   return (
+  //       <MyForm />
+  //   );
+  // }
+    render() {
+        return (
+            <MyC />
+        );
+    }
 }
 
 class MyForm extends Component{
