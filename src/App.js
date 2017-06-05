@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import $ from 'jquery';
 import MyC from './login/login'
+import Login2 from "./login/login2";
 // import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 // class App extends Component {
@@ -31,7 +32,7 @@ class App extends Component {
   // }
     render() {
         return (
-            <MyC />
+            <Login2 name="333"/>
         );
     }
 }

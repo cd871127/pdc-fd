@@ -20,9 +20,10 @@ class MyB extends Component{
         this.state={
             liked: false
         }
+        this.handleClick = this.handleClick.bind(this);
     };
     handleClick(){
-        this.setState({liked: !this.state.liked}).bind(this);
+        this.setState({liked: !this.state.liked});
     };
 
     render(){
