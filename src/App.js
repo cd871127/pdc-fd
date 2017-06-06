@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import $ from 'jquery';
-import MyC from './login/login'
-import Login2 from "./login/login2";
+import Blog from './learn/blog';
+import NameForm from "./learn/nameForm";
+import {LoginForm} from "./login/LoginComponent";
 // import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 // class App extends Component {
@@ -23,6 +24,10 @@ import Login2 from "./login/login2";
 //     );
 //   }
 // }
+const posts = [
+    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
 
 class App extends Component {
   // render() {
@@ -32,7 +37,7 @@ class App extends Component {
   // }
     render() {
         return (
-            <Login2 name="333"/>
+            <LoginForm/>
         );
     }
 }
