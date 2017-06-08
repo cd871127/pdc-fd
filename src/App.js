@@ -1,43 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import $ from 'jquery';
-import Blog from './learn/blog';
-import NameForm from "./learn/nameForm";
-import {LoginForm} from "./login/LoginComponent";
+// import Blog from './learn/blog';
+// import NameForm from "./learn/nameForm";
+// import {LoginForm} from "./login/LoginComponent";
+import RegisterForm from './register/component'
 // import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <div className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h2>Welcome to React</h2>
-//         </div>
-//         <p className="App-intro">
-//           To get started, edit3 <code>src/App.js</code> and save to reload.
-//         </p>
-//         <Hello />
-//       </div>
-//
-//     );
-//   }
-// }
-const posts = [
-    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
-];
-
 class App extends Component {
-  // render() {
-  //   return (
-  //       <MyForm />
-  //   );
-  // }
+
     render() {
         return (
-            <LoginForm/>
+            <RegisterForm/>
         );
     }
 }
